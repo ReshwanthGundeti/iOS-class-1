@@ -38,6 +38,48 @@ print(1,2,3,4,5, separator: "-")
 let Hear : String = "Hello!"
 print(Hear , "All")
 
+------------------------------------------------------------------------------------------------------------
+CLASS -2 
+//
+//  ViewController.swift
+//  Helloapp2
+//
+//  Created by Gundeti,Reshwanth on 1/20/22.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var nameoutlet: UITextField!
+    
+    
+    @IBOutlet weak var gradetext: UITextField!
+    
+    @IBOutlet weak var Displaylabel: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        
+        
+        
+    }
+
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        //read the data from textbox and storeit ina variable
+        
+        var name = nameoutlet.text!
+        var grade = gradetext.text!
+        
+        //Change the display label with this format. Hello, name!
+        
+        Displaylabel.text = "Hello, \(name)! your grade is \(grade)"
+        
+    }
+    
+}
+
 
 
 
