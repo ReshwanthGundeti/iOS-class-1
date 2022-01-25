@@ -79,6 +79,48 @@ class ViewController: UIViewController {
     }
     
 }
+<hr>
+Class --3
+------------------------------------------------------
+//
+//  ViewController.swift
+//  VowelTester
+//
+//  Created by Gundeti,Reshwanth on 1/25/22.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var Textoutlet: UITextField!
+    
+    @IBOutlet weak var Displaylabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func ButtonClicked(_ sender: UIButton) {
+        
+        //Read the text
+        var enteredText = Textoutlet.text!
+        //Check
+        if(enteredText.contains("a") ||
+           enteredText.contains("e") || enteredText.contains("i") || enteredText.contains("o") ||
+           enteredText.contains("u")){
+            Displaylabel.text = "The text contains vowels"
+        }
+        
+        else{
+            Displaylabel.text = "There are no vowels"
+        }
+    }
+    
+}
+
+
 
 
 
